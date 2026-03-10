@@ -7,7 +7,7 @@ RUN sed -i '/^#\\[multilib\\]$/,/^$/{s/^#//}' /etc/pacman.conf && \
     json-glib jsoncpp ceccomp boost-libs && \
     pacman -Scc --noconfirm
 
-RUN git clone https://github.com/matrix1001/glibc-all-in-one.git /root/glibc-all-in-one
+RUN git clone https://github.com/matrix1001/glibc-all-in-one.git /root/glibc-all-in-one --depth 1
 
 COPY configs/nginx.conf /etc/nginx/nginx.conf
 COPY configs/supervisord.conf /etc/supervisord.conf
