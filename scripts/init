@@ -104,5 +104,7 @@ else
     echo "[+] filebrowser: using existing database"
 fi
 
+echo "flag{$(head -c 64 /dev/random | sha256sum - | cut -d' ' -f1)}" > /flag
+
 echo "[+] starting supervisord..."
 exec supervisord -c /etc/supervisord.conf

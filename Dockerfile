@@ -13,4 +13,5 @@ COPY configs/nginx.conf /etc/nginx/nginx.conf
 COPY configs/supervisord.conf /etc/supervisord.conf
 COPY configs/debian.urls /etc/debuginfod/
 COPY scripts/tmux.sh /tmux.sh
-RUN chmod +x /tmux.sh
+COPY scripts/init /init
+RUN chmod +x /tmux.sh /init
