@@ -70,11 +70,11 @@ fi
 
 # ---- 3.1. Codex MCP servers（运行时可选）----
 if [ -n "${IDA_MCP_URL:-}" ]; then
-    codex mcp add ida "${IDA_MCP_URL}"
+    codex mcp add ida --url "${IDA_MCP_URL}"
 fi
 
 if [ -n "${GHIDRA_MCP_URL:-}" ]; then
-    codex mcp add ghidra "${GHIDRA_MCP_URL}"
+    codex mcp add ghidra --url "${GHIDRA_MCP_URL}"
 fi
 
 # 代理（只在非空时写入）
